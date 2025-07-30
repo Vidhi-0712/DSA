@@ -1,0 +1,31 @@
+class Solution {
+    int digit=0;
+    int number = 0;
+    int sum =0;
+    public boolean isPalindrome(int x) {
+        number=x;
+        if(number<0){
+            return false;
+        } else{
+        while(number != 0){
+            digit = number%10;
+            sum = sum * 10 +digit;
+            number = number/10;
+        }
+        if(sum == x){
+            return true;
+        }else{
+            return false;
+        }
+
+        }    
+}
+}
+public class Palindrome{
+    public static void main(String[] args){
+        Solution sc = new Solution();
+        sc.isPalindrome(121);
+        sc.isPalindrome(-121);
+        sc.isPalindrome(10);
+    }
+}
